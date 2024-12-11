@@ -2,6 +2,9 @@
 from simulator import robot
 import time
 
+
+
+
 def forward(distance):
     robot.motors(1, 1, distance)
 def backward(distance):
@@ -45,6 +48,8 @@ while True:
             print(left, right)
             backward(1)
             forward(1)
+            backward(1)
+            forward(1)
             
 # New function to return if the robot can move forward based on sonar readings
 
@@ -59,8 +64,3 @@ def autonomous_movement():
     start_time = time.time()
     while time.time() - start_time <20:
          left, right = robot.sonars
-
-
-
-
-        
