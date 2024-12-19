@@ -63,7 +63,7 @@ def autonomous_movement():
     start_time = time.time()
     while time.time() - start_time <20:
          left, right = robot.sonars
-def avoid_walls(threshold_distance):
+def avoid_walls():
     left, right = robot.sonars()
     if left < 10 or right < 10:  # Threshold to detect walls
         turn_left(1)  # Adjust direction
